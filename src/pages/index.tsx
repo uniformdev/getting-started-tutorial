@@ -1,5 +1,5 @@
 import CTA from "@/components/CTA";
-import { Feature } from "@/components/Feature";
+import { Features } from "@/components/Features";
 import { Hero } from "@/components/Hero";
 import { Layout } from "@/components/Layout";
 import Head from "next/head";
@@ -14,9 +14,22 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <Hero />
-        <Feature />
-        <CTA />
+        <Hero
+          titleA="The Freedom to Create the"
+          highlightedTitle="Websites"
+          titleB="You Want"
+          subtext="A professonal website drives sales. Create a beautiful website
+                to impress and engage new customers and establish your business
+                online"
+        />
+        <Features
+          subtext="in few easy steps"
+          title="Create Beautiful Landing Pages &amp; Web Apps in a Jiffy"
+        />
+        <CTA
+          title="Build the next big thing and ship to market faster"
+          buttonText="Download Now"
+        />
       </Layout>
     </>
   );

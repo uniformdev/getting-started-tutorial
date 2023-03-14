@@ -1,6 +1,12 @@
 import { FeatureCard } from "./FeatureCard";
 
-export function Feature() {
+export function Features({
+  subtext,
+  title,
+}: {
+  subtext: string;
+  title: string;
+}) {
   return (
     <div className="pb-16" style={{ fontFamily: '"Lato", sans-serif' }}>
       <>
@@ -11,13 +17,13 @@ export function Feature() {
                 tabIndex={0}
                 className="focus:outline-none uppercase text-sm text-center text-gray-600 leading-4"
               >
-                in few easy steps
+                {subtext}
               </p>
               <h1
                 tabIndex={0}
                 className="focus:outline-none text-4xl lg:text-4xl font-extrabold text-center leading-10 text-gray-800 lg:w-5/12 md:w-9/12 pt-4"
               >
-                Create Beautiful Landing Pages &amp; Web Apps in a Jiffy
+                {title}
               </h1>
             </div>
             <div
