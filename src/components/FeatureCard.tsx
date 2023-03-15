@@ -1,9 +1,11 @@
+import { registerUniformComponent } from "@uniformdev/canvas-react";
+
 export function FeatureCard({
-  imgURL,
+  imgUrl,
   title,
   description,
 }: {
-  imgURL: string;
+  imgUrl: string;
   title: string;
   description: string;
 }) {
@@ -17,7 +19,7 @@ export function FeatureCard({
         <div className="w-20 h-20 relative mr-5">
           <div className="absolute top-0 right-0 bg-indigo-100 rounded w-16 h-16 mt-2 mr-1" />
           <div className="absolute text-white bottom-0 left-0 bg-indigo-700 rounded w-16 h-16 flex items-center justify-center mt-2 mr-3">
-            <img src={imgURL} alt={title} />
+            <img src={imgUrl} alt={title} />
           </div>
         </div>
         <div className="w-10/12">
@@ -38,3 +40,8 @@ export function FeatureCard({
     </>
   );
 }
+
+registerUniformComponent({
+  type: "featureCard",
+  component: FeatureCard,
+});

@@ -1,4 +1,7 @@
-import { FeatureCard } from "./FeatureCard";
+import {
+  registerUniformComponent,
+  UniformSlot,
+} from "@uniformdev/canvas-react";
 
 export function Features({
   subtext,
@@ -31,34 +34,7 @@ export function Features({
               aria-label="group of cards"
               className="focus:outline-none mt-20 flex flex-wrap justify-center gap-10 px-4"
             >
-              <FeatureCard
-                imgURL="https://tuk-cdn.s3.amazonaws.com/can-uploader/icon_and_text-SVG1.svg"
-                title="Ready to use components"
-                description="It provides a very simple start, no need to write a lot of
-                    code, you just import it and start the primitive components
-                    and create the ones you need."
-              />
-              <FeatureCard
-                imgURL="https://tuk-cdn.s3.amazonaws.com/can-uploader/icon_and_text-SVG2.svg"
-                title="High Quality UI you can reply on"
-                description="Modify the visual appearance of your site – including
-                colors, fonts, margins and other style-related properties –
-                with a sophisticated style."
-              />
-              <FeatureCard
-                imgURL="https://tuk-cdn.s3.amazonaws.com/can-uploader/icon_and_text-SVG3.svg"
-                title="Coded by Developers for Developers"
-                description="Instead of just giving you the tools to create your own
-                site, they offer you a list of themes you can choose from.
-                Thus a handy product."
-              />
-              <FeatureCard
-                imgURL="https://tuk-cdn.s3.amazonaws.com/can-uploader/icon_and_text-SVG4.svg"
-                title="The Last UI kit you’ll ever need"
-                description="We have chosen the bright color palettes that arouse the
-                only positive emotions. The kit that simply assures to be
-                loved by everyone."
-              />
+              <UniformSlot name="featureCards" />
             </div>
           </div>
         </section>
@@ -66,3 +42,8 @@ export function Features({
     </div>
   );
 }
+
+registerUniformComponent({
+  type: "features",
+  component: Features,
+});

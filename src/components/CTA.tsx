@@ -1,3 +1,5 @@
+import { registerUniformComponent } from "@uniformdev/canvas-react";
+
 export default function CTA({
   title,
   buttonText,
@@ -24,3 +26,8 @@ export default function CTA({
     </div>
   );
 }
+
+registerUniformComponent({
+  type: "cta",
+  component: CTA,
+});
