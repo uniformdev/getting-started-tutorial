@@ -3,11 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "yarn download:manifest & next dev",
-    "build": "yarn download:manifest & next build",
+    "dev": "next dev",
+    "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "download:manifest": "uniform context manifest download -o ./manifest.json"
+    "lint": "next lint"
   },
   "dependencies": {
     "@types/node": "18.14.6",
@@ -16,9 +15,6 @@
     "@uniformdev/canvas": "^18.22.0",
     "@uniformdev/canvas-next": "^18.22.0",
     "@uniformdev/canvas-react": "^18.22.0",
-    "@uniformdev/cli": "^18.22.0",
-    "@uniformdev/context": "^18.22.0",
-    "@uniformdev/context-react": "^18.22.0",
     "eslint": "8.35.0",
     "eslint-config-next": "13.2.3",
     "next": "13.2.3",
