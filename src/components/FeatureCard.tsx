@@ -18,7 +18,7 @@ export function FeatureCard({
       >
         <div className="w-20 h-20 relative mr-5">
           <div className="absolute top-0 right-0 bg-indigo-100 rounded w-16 h-16 mt-2 mr-1" />
-          <div className="absolute text-white bottom-0 left-0 bg-indigo-700 rounded w-16 h-16 flex items-center justify-center mt-2 mr-3">
+          <div className="absolute text-white bottom-0 left-0 bg-[#082491] rounded w-16 h-16 flex items-center justify-center mt-2 mr-3">
             <img src={imgUrl} alt={title} />
           </div>
         </div>
