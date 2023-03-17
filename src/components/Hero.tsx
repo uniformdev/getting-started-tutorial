@@ -1,8 +1,4 @@
-import {
-  registerUniformComponent,
-  UniformSlot,
-} from "@uniformdev/canvas-react";
-import { CTAButton } from "./CTAButton";
+import { UniformSlot } from "@uniformdev/canvas-react";
 
 type HeroPropType = {
   titleA: string;
@@ -40,8 +36,3 @@ export function Hero({
     </div>
   );
 }
-
-registerUniformComponent({
-  type: "hero",
-  component: Hero,
-});

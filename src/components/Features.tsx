@@ -1,7 +1,4 @@
-import {
-  registerUniformComponent,
-  UniformSlot,
-} from "@uniformdev/canvas-react";
+import { UniformSlot } from "@uniformdev/canvas-react";
 
 export function Features({
   subtext,
@@ -42,8 +39,3 @@ export function Features({
     </div>
   );
 }
-
-registerUniformComponent({
-  type: "features",
-  component: Features,
-});

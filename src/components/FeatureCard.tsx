@@ -1,5 +1,3 @@
-import { registerUniformComponent } from "@uniformdev/canvas-react";
-
 export function FeatureCard({
   imgUrl,
   title,
@@ -40,8 +38,3 @@ export function FeatureCard({
     </>
   );
 }
-
-registerUniformComponent({
-  type: "featureCard",
-  component: FeatureCard,
-});

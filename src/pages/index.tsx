@@ -1,7 +1,13 @@
 import { Layout } from "@/components/Layout";
 import Head from "next/head";
 import { CanvasClient } from "@uniformdev/canvas";
-import { UniformComposition, UniformSlot } from "@uniformdev/canvas-react";
+import {
+  UniformComposition,
+  UniformSlot,
+  DefaultNotImplementedComponent,
+  ComponentProps,
+} from "@uniformdev/canvas-react";
+import { Hero } from "@/components/Hero";
 
 export async function getStaticProps() {
   const client = new CanvasClient({
@@ -18,6 +24,18 @@ export async function getStaticProps() {
   };
 }
 
+function resolveRenderer({ type }: { type: string }) {
+  const components: Record<string, React.ComponentType<ComponentProps<any>>> = {
+    hero: Hero,
+    // features: Features,
+    // featureCard: FeatureCard,
+    // ctaButton: CTAButton,
+    // cta: CTA,
+  };
+
+  return components[type] ?? DefaultNotImplementedComponent;
+}
+
 export default function Home(props: any) {
   const { composition } = props;
   return (
@@ -29,7 +47,11 @@ export default function Home(props: any) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <UniformComposition data={composition} behaviorTracking={"onLoad"}>
+        <UniformComposition
+          data={composition}
+          behaviorTracking={"onLoad"}
+          resolveRenderer={resolveRenderer}
+        >
           <UniformSlot name="content" />
         </UniformComposition>
       </Layout>

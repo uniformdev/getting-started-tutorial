@@ -26,8 +26,3 @@ export default function CTA({
     </div>
   );
 }
-
-registerUniformComponent({
-  type: "cta",
-  component: CTA,
-});
